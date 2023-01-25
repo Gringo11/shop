@@ -1,0 +1,37 @@
+.wrapper {
+  margin: auto;
+}
+.products {
+  width: 1100px;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto;
+  margin-top: 24px;
+}
+.photo {
+  width: 325px;
+  height: 294px;
+  object-fit: cover;
+}
+.add {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  padding: 8px 67px;
+  background-color: white;
+  cursor: pointer;
+  width: 100%;
+  justify-content: center;
+}
+.add a {
+  text-decoration: none;
+  color: #000000;
+  background-color: white;
+}
