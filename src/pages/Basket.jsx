@@ -7,6 +7,7 @@ export const Basket = ({ basket, deleteFromBasket }) => {
       <div className="products">
         {basket.map((product) => (
           <Product
+            key={product.id}
             data={product}
             onClick={() => deleteFromBasket(product.id)}
             title={"Удалить из корзины"}

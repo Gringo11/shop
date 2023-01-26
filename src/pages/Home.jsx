@@ -9,6 +9,7 @@ export const Home = ({ addToBasket, basket }) => {
       <div className="products">
         {Products.map((product) => (
           <Product
+            key={product}
             data={product}
             onClick={() => addToBasket(product)}
             basket={basket}
