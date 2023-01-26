@@ -7,20 +7,19 @@ import { useState } from "react";
 
 function App() {
   const [basket, setBasket] = useState([]);
-  const [basketTotal, setBasketTotal] = useState(0);
+
   const addToBasket = (product) => {
     setBasket([...basket, product]);
-    setBasketTotal(basketTotal + 1);
   };
   const deleteFromBasket = (id) => {
-    setBasketTotal(basketTotal - 1);
     const newArr = basket.filter((item) => item.id !== id);
     setBasket(newArr);
   };
+
   return (
     <>
       <Router>
-        <Navbar basketTotal={basketTotal} />
+        <Navbar counter={basket.length} />
         <Routes>
           <Route
             path="/"

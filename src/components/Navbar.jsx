@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/navbar.css";
 
-export const Navbar = (props) => {
+export const Navbar = ({ counter }) => {
   return (
     <div className="navbar">
       <div className="links">
@@ -12,9 +12,7 @@ export const Navbar = (props) => {
         <Link to="/Basket">
           <i className="fa-solid fa-cart-shopping"></i>
           <div className="he">
-            {props.basketTotal > 0 && (
-              <div className="counter">{props.basketTotal}</div>
-            )}
+            {counter > 0 && <div className="counter">{counter}</div>}
           </div>
         </Link>
       </div>
